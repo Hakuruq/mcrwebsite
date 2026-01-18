@@ -53,9 +53,9 @@ body {
 
 .main-page-history {
     padding: 20px;
-    display: flex;
+    display: grid;
     gap: 20px;
-    flex-direction: column;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     align-items: flex-start;
     font-size: 20px;
