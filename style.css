@@ -6,15 +6,33 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #222222;
+    /*background-color: #222222;
     min-height: 100vh;
     color: #ffffff;
     display: flex;
     flex-direction: column;
     width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden;*/
+    background-color: #222222; /* */
+    color: #dddada; /* */
+    font-family: 'Montserrat', sans-serif; /* Основний шрифт для всього сайту */
+    line-height: 1.6;
 }
+
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+h1 { font-size: 4rem; margin-bottom: 20px; }
+h2 { font-size: 3rem; margin-bottom: 30px; }
+h3 { font-size: 1.8rem; color: #b11313; }
 
 .main-header {
     background-color: #000000;
@@ -33,6 +51,19 @@ body {
     gap: 50px;
     min-height: calc(100vh - 95px);
 }
+
+.scroll-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #b11313;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
 .discography-page-text {
     
     padding: 20px;
@@ -45,8 +76,7 @@ body {
 
 .main-page-text-content h1 {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 4rem;
-    flex: 1;
+    font-size: 3.5rem;
 }
 .main-page-text-content p {
     font-family: 'Montserrat', sans-serif;
@@ -79,7 +109,7 @@ body {
 .history-images img {
     width: 100%;
     height: 400px;
-    object-fit: cover; /* Зображення заповнюють блок без деформації */
+    object-fit: cover;
     border: 2px solid #444;
     box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
 }
@@ -93,11 +123,17 @@ body {
 }
 
 .navigation a{
-    color: #dddada;
     text-decoration: none;
-    margin-left: 20px;
-    font-family: sans-serif;
-    font-weight: bold;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+.navigation a:hover {
+    color: #b11313; 
 }
 
 .official-resources {
@@ -106,10 +142,15 @@ body {
 }
 
 .socials-button {
-    font-size: 24px;
-    display: inline-block;
-    padding: 8px 16px;
-    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    margin-left: 15px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.socials-button:hover {
+    color: #b11313;
+    transform: translateY(-3px); /* Легке підстрибування вгору */
 }
 
 footer {
@@ -119,6 +160,11 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+footer p {
+    font-size: 14px;
+    font-weight: 300;
+    opacity: 0.8;
 }
 
 @media (max-width: 768px) {
