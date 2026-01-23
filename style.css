@@ -64,7 +64,7 @@ h3 { font-size: 1.8rem; color: #b11313; }
     transition: 0.3s;
 }
 
-.discography-page-text {
+.discography-page-header {
     
     padding: 20px;
     display: flex;
@@ -72,6 +72,10 @@ h3 { font-size: 1.8rem; color: #b11313; }
     align-items: flex-start;
     gap: 20px;
     font-size: 24px;
+}
+
+.discography-page-albums {
+
 }
 
 .main-page-text-content h1 {
