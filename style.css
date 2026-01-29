@@ -65,31 +65,70 @@ h3 { font-size: 1.8rem; color: #b11313; }
 }
 
 .discography-page-header {
-    
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
-    font-size: 24px;
+    padding: 80px;
+    border-bottom: 1px solid #333;
+}
+.discography-page-header h1 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+}
+
+.discography-page-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #bcbcbc;
+    max-width: 800px;
+    line-height: 1.8;
+    margin-top: 25px;
 }
 
 .discography-page-text {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    padding: 40px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 80px
 }
 
 .discography-page-albums {
-    text-align: center;
-}
-.discography-page-albums img {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
     width: 100%;
-    max-width: 300px;
-    border-radius: 5px;
+}
+
+.album-image {
+    flex: 0 0 350px;
+}
+
+.album-info {
+    flex: 1;
+}
+.album-info h2 {
+    font-size: 2.5rem;
     margin-bottom: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    color: #ffffff;
+}
+.album-info ol {
+    list-style-position: inside;
+    padding-left: 15px;
+    margin-top: 15px;
+    color: #bcbcbc;
+}
+.album-info ol li {
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #bcbcbc;
+}
+
+.album-description {
+    font-family: 'Montserrat', sans-serif;
+    color: #bcbcbc;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
 .main-page-text-content h1 {
@@ -193,17 +232,20 @@ footer p {
 }
 
 details {
-    overflow: hidden;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 4px;
 }
 
 summary {
-    padding: 10px;
+    padding: 12px;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 1.4rem;
-    color: #ffffff;
     cursor: pointer;
-    list-style: none;
+    color: #ffffff;
+    background: #282828;
+    transition: 0.3s;
 }
+
 summary:hover {
     color: #b11313;
 }
@@ -216,12 +258,26 @@ summary:hover {
         justify-content: center;
         min-height: 100vh;
     }
+
     .main-page-text-content {
         margin-bottom: 20px;
     }
+
     .band-picture img {
         width: 100%;
         max-width: 400px;
         min-width: 0;
+    }
+
+    .discography-page-albums {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .album-image {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;
     }
 }
