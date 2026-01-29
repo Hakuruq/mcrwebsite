@@ -18,9 +18,9 @@ body {
     flex-direction: column;
     width: 100%;
     overflow-x: hidden;*/
-    background-color: #222222; /* */
-    color: #dddada; /* */
-    font-family: 'Montserrat', sans-serif; /* Основний шрифт для всього сайту */
+    background-color: #222222;
+    color: #dddada;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
 }
 
@@ -74,8 +74,22 @@ h3 { font-size: 1.8rem; color: #b11313; }
     font-size: 24px;
 }
 
-.discography-page-albums {
+.discography-page-text {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 40px 10%;
+}
 
+.discography-page-albums {
+    text-align: center;
+}
+.discography-page-albums img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 .main-page-text-content h1 {
@@ -111,10 +125,10 @@ h3 { font-size: 1.8rem; color: #b11313; }
     color: #bcbcbc;
 }
 .main-page-history h2 {
-    grid-column: span 2; /* Заголовок займає обидві колонки сітки */
-    text-align: center;  /* Центрування тексту */
-    font-size: 3rem;     /* Використовуємо розмір, який ви вже задали раніше */
-    margin-bottom: 40px; /* Додатковий відступ знизу від заголовка */
+    grid-column: span 2;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
 }
 
 .history-images img {
@@ -161,7 +175,7 @@ h3 { font-size: 1.8rem; color: #b11313; }
 }
 .socials-button:hover {
     color: #b11313;
-    transform: translateY(-3px); /* Легке підстрибування вгору */
+    transform: translateY(-3px);
 }
 
 footer {
@@ -176,6 +190,22 @@ footer p {
     font-size: 14px;
     font-weight: 300;
     opacity: 0.8;
+}
+
+details {
+    overflow: hidden;
+}
+
+summary {
+    padding: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+    cursor: pointer;
+    list-style: none;
+}
+summary:hover {
+    color: #b11313;
 }
 
 @media (max-width: 768px) {
