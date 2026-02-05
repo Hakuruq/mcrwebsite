@@ -90,8 +90,10 @@ h3 { font-size: 1.8rem; color: #b11313; }
     width: 100%;
 }
 
-.album-image {
+.album-image img {
     flex: 0 0 350px;
+    object-fit: contain;
+    max-width: 250px;
 }
 
 .album-info {
@@ -214,6 +216,20 @@ h3 { font-size: 1.8rem; color: #b11313; }
 .socials-button:hover {
     color: #b11313;
     transform: translateY(-3px);
+}
+
+.members-page-list {
+    display: flexbox;
+    flex-direction: column;
+    gap: 60px;
+    padding: 80px;
+
+}
+
+.members-page-list img {
+    object-fit: cover;
+    width: 20%;
+    height: 20%;
 }
 
 footer {
