@@ -96,21 +96,21 @@ h3 { font-size: 1.8rem; color: #b11313; }
     max-width: 250px;
 }
 
-.album-info {
+.album-page-info {
     flex: 1;
 }
-.album-info h2 {
+.album-page-info h2 {
     font-size: 2.5rem;
     margin-bottom: 15px;
     color: #ffffff;
 }
-.album-info ol {
+.album-page-info ol {
     list-style-position: inside;
     padding-left: 15px;
     margin-top: 15px;
     color: #bcbcbc;
 }
-.album-info ol li {
+.album-page-info ol li {
     margin-bottom: 8px;
     font-family: 'Montserrat', sans-serif;
     color: #bcbcbc;
@@ -219,17 +219,64 @@ h3 { font-size: 1.8rem; color: #b11313; }
 }
 
 .members-page-list {
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     gap: 60px;
     padding: 80px;
-
 }
 
-.members-page-list img {
+.member-card {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.member-image {
+    flex: 0 0 350px;
+}
+
+.member-image img {
+    width: 100%;
+    height: 450px;
     object-fit: cover;
-    width: 20%;
-    height: 20%;
+    object-position: center top;
+}
+
+.members-page-header {
+    padding: 80px;
+    border-bottom: 1px solid #333;
+}
+.members-page-header h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+}
+.members-page-header p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #bcbcbc;
+    max-width: 800px;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+.members-page-info {
+    flex: 1;
+}
+
+.members-page-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.members-page-info p {
+    font-family: 'Montserrat', sans-serif;
+    color: #bcbcbc;
+    line-height: 1.8;
+    font-size: 1.1rem;
 }
 
 footer {
@@ -294,5 +341,18 @@ summary:hover {
         flex: 0 0 auto;
         width: 100%;
         max-width: 400px;
+    }
+    
+    .member-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+    
+    .member-image {
+        flex: 0 0 auto;
+        width: 100%;
+        height: 350px;
     }
 }
